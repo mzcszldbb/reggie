@@ -34,6 +34,7 @@ public class EmployeeController {
             return R.error("密码错误！！");
         }
         if (result.getStatus() != 1){
+            System.out.println("111");
             return R.error("该账号已被禁用！");
         }
         session.setAttribute("employee",result.getId());
